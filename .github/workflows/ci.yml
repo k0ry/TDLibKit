@@ -49,7 +49,7 @@ jobs:
         with:
           name: TDLibKit-${{ github.sha }}
           path: |
-            !.git/**
+            !./.git
           if-no-files-found: error
 
   test:
