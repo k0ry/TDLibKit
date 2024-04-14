@@ -41,13 +41,15 @@ jobs:
         run: ./scripts/update.py
         env:
           GH_TOKEN: ${{ github.token }}
+      
+      - run: ls -al
   
       - name: Upload Workspace
         uses: actions/upload-artifact@v4
         with:
           name: TDLibKit-${{ github.sha }}
           path: |
-            !.git/
+            !.git/**
           if-no-files-found: error
 
   test:
