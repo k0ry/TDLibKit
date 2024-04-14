@@ -42,13 +42,13 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
       
-      - run: ls -al
+      - run: rm -rf .git
   
       - name: Upload Workspace
         uses: actions/upload-artifact@v4
         with:
           name: TDLibKit-${{ github.sha }}
-          path: '!.git'
+          path: .
           if-no-files-found: error
 
   test:
