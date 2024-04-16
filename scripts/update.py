@@ -19,7 +19,7 @@ def main(tdlibframework_version: str = None):
                 "release",
                 "list",
                 "--repo",
-                "Swiftgram/TDLibFramework",
+                "k0ry/TDLibFramework",
                 "--limit",
                 "1",
                 "--json",
@@ -90,7 +90,7 @@ def main(tdlibframework_version: str = None):
             {
                 "tdlib_version": tdlib_version,
                 "tdlib_commit": tdlib_commit,
-                "tdlibframework_version": tdlibframework_version,
+                "tdlibframework_version": tdlib_version,
             }
         )
         json.dump(current_versions, f, indent=4)
