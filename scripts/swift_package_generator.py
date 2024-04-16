@@ -13,7 +13,7 @@ import PackageDescription
 let package = Package(
     name: "TDLibKit",
     platforms: [
-        // Following versions of https://github.com/Swiftgram/TDLibFramework/blob/main/Package.swift
+        // Following versions of https://github.com/k0ry/TDLibFramework/blob/main/Package.swift
         .iOS(.v12),
         .macOS(.v10_15),
         .watchOS(.v4),
@@ -25,7 +25,7 @@ let package = Package(
             targets: ["TDLibKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Swiftgram/TDLibFramework", .exact("{tdlibframework_version}")),
+        .package(url: "https://github.com/k0ry/TDLibFramework", "1.0.0"..<"2.0.0"),
     ],
     targets: [
         .target(
